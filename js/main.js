@@ -2,7 +2,11 @@
     "use strict";
     // A $( document ).ready() block.
     $( document ).ready(function() {
-        autoPlayVideo('kgx4WGK0oNU','450','283');
+        // autoplay music on page load musicplayer
+        var audio = document.getElementById("musicplayer");
+        audio.volume = 0.5;
+        audio.play();
+
     });
 
     // Spinner
