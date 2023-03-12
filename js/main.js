@@ -2,15 +2,18 @@
     "use strict";
     // A $( document ).ready() block.
     $( document ).ready(function() {
-        var url = new URL($('#videoyoutube').attr('src'));
-        var mute = url.searchParams.get("mute");
-        if(mute == "1"){
+        // var url = new URL($('#videoyoutube').attr('src'));
+        // var mute = url.searchParams.get("mute");
+        // if(mute == "1"){
             //mengubah mute menjadi 0            
             $('#videoyoutube').attr('src', $('#videoyoutube').attr('src').replace('mute=1', 'mute=0'));            
-        }else{
+            $('.ytp-mute-button ytp-button').attr('data-title-no-tooltip', $('.ytp-mute-button ytp-button').attr('data-title-no-tooltip').replace('Unmute', 'Mute'));            
+            // $('.ytp-mute-button ytp-button').attr('data-title-no-tooltip', 'Unmute');
+
+            console.log($('#videoyoutube').attr('src'));
             //mengubah mute menjadi 1
-            $('#videoyoutube').attr('src', $('#videoyoutube').attr('src').replace('mute=1', 'mute=0'));
-        }
+            // $('#videoyoutube').attr('src', $('#videoyoutube').attr('src').replace('mute=1', 'mute=0'));
+
     });
 
     // Spinner
@@ -19,7 +22,7 @@
             if ($('#spinner').length > 0) {
                 $('#spinner').removeClass('show');
             }
-        }, 1);
+        }, 1000);
     };
     spinner();
     
