@@ -2,9 +2,15 @@
     "use strict";
     // A $( document ).ready() block.
     $( document ).ready(function() {
-        // autoplay music on page load musicplayer
-        var audio = document.getElementById("musicplayer");
-        audio.volume = 0.5;
+        var source = "../song/coco.mp3"
+        var audio = new Audio();
+        // no event listener needed here
+        audio.src = source;
+        audio.autoplay = true;
+        console.log(audio);
+        // // autoplay music on page load musicplayer
+        // var audio = document.getElementById("musicplayer");
+        // audio.volume = 0.5;
         audio.play();
 
     });
@@ -83,7 +89,7 @@
     $('.btn-play').click(function () {
         $videoSrc = $(this).data("src");
     });
-    console.log($videoSrc);
+    // console.log($videoSrc);
     $('#videoModal').on('shown.bs.modal', function (e) {
         $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
     })
