@@ -2,17 +2,15 @@
     "use strict";
     // A $( document ).ready() block.
     $( document ).ready(function() {
-        var source = "../song/coco.mp3"
-        var audio = new Audio();
-        // no event listener needed here
-        audio.src = source;
-        audio.autoplay = true;
-        console.log(audio);
-        // // autoplay music on page load musicplayer
-        // var audio = document.getElementById("musicplayer");
-        // audio.volume = 0.5;
-        audio.play();
-
+        var url = new URL($('#videoyoutube').attr('src'));
+        var mute = url.searchParams.get("mute");
+        if(mute == "1"){
+            //mengubah mute menjadi 0            
+            $('#videoyoutube').attr('src', $('#videoyoutube').attr('src').replace('mute=1', 'mute=0'));            
+        }else{
+            //mengubah mute menjadi 1
+            $('#videoyoutube').attr('src', $('#videoyoutube').attr('src').replace('mute=1', 'mute=0'));
+        }
     });
 
     // Spinner
@@ -89,7 +87,7 @@
     $('.btn-play').click(function () {
         $videoSrc = $(this).data("src");
     });
-    // console.log($videoSrc);
+    console.log($videoSrc);
     $('#videoModal').on('shown.bs.modal', function (e) {
         $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
     })
