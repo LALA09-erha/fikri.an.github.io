@@ -5,8 +5,11 @@
             setTimeout(function(){
             // check if musicplayer is playing
             if (document.getElementById("musicplayer").paused) {
-                // if not playing, play it
-                document.getElementById("musicplayer").play();
+                while(document.getElementById("musicplayer").paused){
+                    document.getElementById("musicplayer").play();
+                }
+                        // Automatic playback started!
+
                 console.log(document.getElementById("musicplayer").play());
             }else{
                 document.getElementById("musicplayer").play();
