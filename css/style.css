@@ -5,7 +5,12 @@
     --light: #FAFAFB;
     --dark: #12141D;
 }
-
+#musicplayer{
+    /* custom audio controller */
+    height: 60px;
+    transition: all 0.3s ease;
+    
+}
 .back-to-top {
     position: fixed;
     display: none;

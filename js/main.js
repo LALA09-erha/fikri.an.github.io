@@ -1,5 +1,9 @@
 (function ($) {
     "use strict";
+    // A $( document ).ready() block.
+    $( document ).ready(function() {
+        autoPlayVideo('kgx4WGK0oNU','450','283');
+    });
 
     // Spinner
     var spinner = function () {
