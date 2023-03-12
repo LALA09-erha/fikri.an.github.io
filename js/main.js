@@ -6,13 +6,17 @@
         // var mute = url.searchParams.get("mute");
         // if(mute == "1"){
             //mengubah mute menjadi 0            
-            $('#videoyoutube').attr('src', $('#videoyoutube').attr('src').replace('mute=1', 'mute=0'));            
-            $('.ytp-mute-button ytp-button').attr('data-title-no-tooltip', $('.ytp-mute-button ytp-button').attr('data-title-no-tooltip').replace('Unmute', 'Mute'));            
+
+            // $('#videoyoutube').attr('src', $('#videoyoutube').attr('src').replace('mute=1', 'mute=0'));        
+            setTimeout(function(){
+                //click button mute
+                $('.ytp-mute-button').click();
+                $('#videoyoutube').attr('src', $('#videoyoutube').attr('src').replace('mute=1', 'mute=0'));         
+                console.log($('.ytp-mute-button').click());
+            }, 5000);
+
             // $('.ytp-mute-button ytp-button').attr('data-title-no-tooltip', 'Unmute');
 
-            console.log($('#videoyoutube').attr('src'));
-            //mengubah mute menjadi 1
-            // $('#videoyoutube').attr('src', $('#videoyoutube').attr('src').replace('mute=1', 'mute=0'));
 
     });
 
