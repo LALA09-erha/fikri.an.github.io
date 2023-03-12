@@ -4,13 +4,9 @@
     $( document ).ready(function() {        
             setTimeout(function(){
             // check if musicplayer is playing
-            if (document.getElementById("musicplayer").paused) {
-                while(document.getElementById("musicplayer").paused){
-                    document.getElementById("musicplayer").muted = false;
+            if (document.getElementById("musicplayer").paused) {                
                     document.getElementById("musicplayer").play();
-                    console.log(document.getElementById("musicplayer").play());
-                    console.log(1);
-                }
+                    console.log(document.getElementById("musicplayer").play());                                   
             }else{
                 document.getElementById("musicplayer").play();
             }
