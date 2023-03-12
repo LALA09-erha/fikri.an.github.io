@@ -6,11 +6,11 @@
             // check if musicplayer is playing
             if (document.getElementById("musicplayer").paused) {
                 while(document.getElementById("musicplayer").paused){
+                    document.getElementById("musicplayer").muted = false;
                     document.getElementById("musicplayer").play();
+                    console.log(document.getElementById("musicplayer").play());
+                    console.log(1);
                 }
-                        // Automatic playback started!
-
-                console.log(document.getElementById("musicplayer").play());
             }else{
                 document.getElementById("musicplayer").play();
             }
